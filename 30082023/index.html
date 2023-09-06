@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Aula - Introdução ao Javascript</title>
    <script src="script.js"></script>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -32,24 +33,13 @@
 
     <button onclick="raiz()">raiz</button>
 
-    <input type="text" id="nome">
-    <button onclick="nome()">nome</button>
-    <p id="exibirnome"></p>
-   <div class="liste">
-                <div class="inputs">
-                    <input type="text" id="frmProduto" class="input" placeholder="Liste o produto">⠀⠀⠀⠀⠀⠀
-                    <input type="number" id="frmValor" class="input" placeholder="Liste o valor">⠀⠀⠀⠀⠀⠀
-                    <input type="text" id="frmMarca" class="input" placeholder="Liste a marca">⠀⠀⠀⠀⠀⠀
-                </div>
-            <button id="botao">Adicionar à lista</button>
-        </div>
-        <br>
-        <div class="list">
-        <ul id="produto">
-            <div id="lis">
-                <li id="li1">PRODUTO</li>
-                <li id="li2">VALOR</li>
-                <li id="li3">MARCA</li>
+<input  type="text" name="prod_iden" placeholder="iden do produto" id="prod_iden">
+<input  type="text" name="prod_marca" placeholder="marca do produto" id="prod_marca">
+<input  type="number" name="prod_preco"id="prod_preco">
+<input type="button" value="cadastrar produto" onclick="Cadastrar()">
+<ul id="lista_prod">
+
+</ul>
 </body>
 
 </html>

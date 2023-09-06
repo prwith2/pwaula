@@ -85,7 +85,7 @@ function login(){
    console.log("Esse console log mostra o array completo")
 }
 
-function array(){
+   function array(){
    let n = [3, 4, 5, 6, 2, 1,]
    console.log("Esse console log mostra o array completo: " + n)
    console.log(n)
@@ -94,41 +94,30 @@ function array(){
    console.log("Esse e o indice 6: " + n[6])
    n.push(68)
    n.push(70)
-   // push = empurrar
    console.log("Novo array completo: ")
    console.log(n)
    n.pop()
    console.log("Novo Log depois da atualização")
-   console.log(n)
-   //tira o ultimo  elemento do array
+   console.log(n) 
+   }
+   function Cadastrar(){
+      const produto = {
+         iden: document.getElementById("prod_iden").value,
+         marca: document.getElementById("prod_marca").value,
+         preco: document.getElementById("prod_preco").value
+      }
    
-   
-   }
-   function produto(){
-       let product = document.getElementById("frmProduto").value
-       let li = document.createElement("li") 
-       li.innerHTML=product
-       document.getElementById("li1").appendChild(li)
-       console.log(product)
-   }
-   function valor(){
-       let Valor = document.getElementById("frmValor").value
-       let li = document.createElement("li") 
-       li.innerHTML=Valor
-       document.getElementById("li2").appendChild(li)
-       console.log(Valor)
-   }
-   function marca(){
-       let marca = document.getElementById("frmMarca").value
-       let li = document.createElement("li") 
-       li.innerHTML=marca
-       document.getElementById("li3").appendChild(li)
-       console.log(marca)
-   }
-   document.addEventListener("DOMContentLoaded", function() {
-       document.getElementById("botao").addEventListener("click", function(){
-           produto();
-           valor();
-           marca();
-       });
-   });
+   const lista_item = document.createElement("li")
+      const prod_iden = document.createElement("h3")
+      const prod_preco = document.createElement("p")
+      const prod_marca = document.createElement("h4")
+      prod_iden.innerHTML = produto.iden
+      prod_preco.innerHTML = produto.preco
+      prod_marca.innerHTML = produto.marca
+      lista_item.appendChild(prod_iden)
+      lista_item.appendChild(prod_preco)
+      lista_item.appendChild(prod_marca)
+
+   document.getElementById("lista_prod").appendChild(lista_item)
+   console.log(lista_item)
+   }   
